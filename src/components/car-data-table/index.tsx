@@ -1,10 +1,8 @@
-import Image from "next/image"
 import dayjs from "dayjs"
-import { cars } from "@/data/cars"
-import { Table } from "../table"
-import { StatusBadge } from "../status-badge"
-import { RatingStars } from "../rating-stars"
+import Image from "next/image"
 import { MoreVerticalIcon } from "lucide-react"
+import { cars } from "@/data/cars"
+import { IconButton, RatingStars, StatusBadge, Table } from ".."
 
 export function CarDataTable() {
 	return (
@@ -47,10 +45,8 @@ export function CarDataTable() {
 						</Table.Data>
 
 						<Table.Data>
-							<div className="flex items-center justify-center">
-								<button>
-									<MoreVerticalIcon className="block h-5 w-5" />
-								</button>
+							<div className="grid place-items-center">
+								<IconButton icon={MoreVerticalIcon} />
 							</div>
 						</Table.Data>
 					</Table.Row>
